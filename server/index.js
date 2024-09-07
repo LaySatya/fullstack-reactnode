@@ -13,10 +13,10 @@ app.use(cors()); // Add this line to enable CORS
 
 // create databse connection
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'nodejs_mysql_db'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWOR,
+    database: process.env.DB_DBNAME
 });
 
 // Listen to client request (http method)
