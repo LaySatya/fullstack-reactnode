@@ -139,7 +139,6 @@ app.get('/api/searchCustomers', (req, res) => {
         }
     });
 });
-
 // listen to run to server
 app.listen(8080, () => {
     console.log("Server running at http://localhost:8080");
