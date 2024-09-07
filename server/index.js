@@ -115,30 +115,30 @@ app.delete('/api/customer/:id', (req , res) => {
     })
 });
 
-app.get('/api/searchCustomers', (req, res) => {
-    // Retrieve the search term from the query parameters
-    const searchTerm = req.query.search || ''; // Default to empty string if not provided
+// app.get('/api/searchCustomers', (req, res) => {
+//     // Retrieve the search term from the query parameters
+//     const searchTerm = req.query.search || ''; // Default to empty string if not provided
 
-    // Construct the search pattern
-    const reqSearch = `%${searchTerm}%`;
+//     // Construct the search pattern
+//     const reqSearch = `%${searchTerm}%`;
 
-    // SQL query with placeholder
-    const sqlSearch = 'SELECT * FROM `customers` WHERE `firstname` LIKE ?';
+//     // SQL query with placeholder
+//     const sqlSearch = 'SELECT * FROM `customers` WHERE `firstname` LIKE ?';
 
-    // Execute the query
-    db.query(sqlSearch, [reqSearch], (err, result) => {
-        if (err) {
-            res.status(500).json({
-                error: true,
-                message: err.message
-            });
-        } else {
-            res.json({
-                list: result
-            });
-        }
-    });
-});
+//     // Execute the query
+//     db.query(sqlSearch, [reqSearch], (err, result) => {
+//         if (err) {
+//             res.status(500).json({
+//                 error: true,
+//                 message: err.message
+//             });
+//         } else {
+//             res.json({
+//                 list: result
+//             });
+//         }
+//     });
+// });
 // listen to run to server
 app.listen(8080, () => {
     console.log("Server running at http://localhost:8080");
