@@ -1,0 +1,18 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "+ Node Js  + MySql      - Node Js         - structure nodejs project         - express dependency         - mysql dependency         - create db connection         - CRUD data in db         - test postman     - MySQL          - create database         - create tables         - sql script ( select , create , update , delete) + What we need     - node -v     - text editor VS code      - mysql server  (xampp , wampp , ...)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "nodemon": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
